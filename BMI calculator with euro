@@ -1,0 +1,36 @@
+name = input ("Enter your name:")
+while True:
+    
+    try:
+        height = float(input("Enter your height in meters:"))
+        if height % 1 !=0: ### 
+            break
+        else:
+            print("Please enter a decimal number.") ### 
+            
+    except ValueError:
+        print ("Please enter a valid number.")
+            
+        
+        
+    except ValueError as e:
+        print (f"Error:{e}")
+        
+
+weight = int(input("Enter your weight in kilograms:")) ### 
+BMI = (weight)/(height * height )
+print("your BMI is:",BMI)
+
+if BMI>0:
+    if(BMI<18.5):
+         print (f" {name},your BMI is below average.") ### 
+    elif(18.5<=BMI<=24.9):
+         print (f"{name},your BMI is ideal.")
+    elif(24.9<=BMI<=29.9):
+         print (f"{name},your BMI is above average.")
+    elif(29.9<=BMI<=39.9):
+         print (f"{name},your BMI is well above average: you are obese.")
+    else:
+         print (f"{name},your BMI is much above average: you are morbid obese.") ## 
+else:
+    print("Enter valid inputs")
