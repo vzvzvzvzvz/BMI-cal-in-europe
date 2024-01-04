@@ -1,0 +1,27 @@
+import os, shutil
+path =r"write where is your path"
+
+file_name = os.listdir(path)
+os.listdir(path)  ### for control
+
+folder_names = ["what are you name the file","what are you name the file","what are you name the file","what are you name the file"] ## you should to add file
+###
+
+for loop in range(0,4): ### 0.4 is number of files
+    if not os.path.exists(path + folder_names[loop]):
+        print (path+ folder_names[loop])
+        os.makedirs(path + folder_names[loop]) 
+
+for file in file_name:
+    if "what is your file extention ex: .png" in file and not os.path.exists(path + "Which file do you want to send?/" + file):
+        shutil.move(path + file,path +"csv files/" + file)
+    elif "what is your file extention" in file and not os.path.exists(path + "Which file do you want to send?/" + file):
+        shutil.move(path + file,path +"image files/" + file)
+    elif "what is your file extention" in file and not os.path.exists(path + "Which file do you want to send?/" + file):
+        shutil.move(path + file,path +"text files/" + file)
+    elif "what is your file extention" in file and not os.path.exists(path + "Which file do you want to send?/" + file):
+        shutil.move(path + file,path +"ipynb files/" + file)
+    else: 
+        print("error message what are you want.")
+ 
+done 
